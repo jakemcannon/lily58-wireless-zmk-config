@@ -13,7 +13,7 @@
         tab_right: tab_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_ALT &kt LEFT_COMMAND &kp RIGHT &kt LEFT_ALT &kt LEFT_COMMAND>;
+            bindings = <&kt LEFT_ALT &kt LEFT_COMMAND &kp RIGHT &kp LEFT_ALT &kp LEFT_COMMAND>;
             label = "TAB_RIGHT";
         };
 
@@ -27,7 +27,7 @@
         tab_left: tab_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_ALT &kt LEFT_COMMAND &kp LEFT &kp LEFT_ALT &kt LEFT_COMMAND>;
+            bindings = <&kt LEFT_ALT &kt LEFT_COMMAND &kp LEFT &kp LEFT_ALT &kp LEFT_COMMAND>;
             label = "TAB_LEFT";
         };
     };
