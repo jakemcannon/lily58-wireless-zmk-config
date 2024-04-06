@@ -30,6 +30,20 @@
             bindings = <&kt LEFT_ALT &kt LEFT_COMMAND &kp LEFT &kp LEFT_ALT &kp LEFT_COMMAND>;
             label = "TAB_LEFT";
         };
+
+        sticky_left: sticky_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT &sk LEFT_COMMAND &kp LEFT>;
+            label = "STICKY_LEFT";
+        };
+
+        sticky_right: sticky_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT &sk LEFT_COMMAND &kp RIGHT>;
+            label = "STICKY_RIGHT";
+        };
     };
 
     keymap {
@@ -66,7 +80,7 @@
             display-name = "Lower";
             bindings = <
 &none   &kp SLASH     &none         &none         &none         &none                           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans
-&none   &kp ASTERISK  &kp NUMBER_9  &kp NUMBER_8  &kp NUMBER_7  &kp PERIOD                      &none                 &tab_left             &kp UP_ARROW    &none              &none            &none
+&none   &kp ASTERISK  &kp NUMBER_9  &kp NUMBER_8  &kp NUMBER_7  &kp PERIOD                      &none                 &sticky_left          &kp UP_ARROW    &sticky_right      &none            &none
 &none   &kp MINUS     &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4  &kp NUMBER_0                    &none                 &kp LEFT_ARROW        &kp DOWN_ARROW  &kp RIGHT_ARROW    &none            &none
 &trans  &kp PLUS      &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp DOLLAR    &trans    &trans  &hello                &tab_left             &tab_right      &none              &none            &none
                                     &trans        &trans        &trans        &trans    &trans  &trans                &trans                &trans
